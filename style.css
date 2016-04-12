@@ -28,3 +28,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background: #669966;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    color: #fff;
+}
+
+footer {
+    background: #eee;
+    text-align:center;
+    padding: 10px 0;
+}
