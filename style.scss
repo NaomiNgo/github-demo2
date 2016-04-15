@@ -39,6 +39,7 @@ embed, object, iframe, img {
 h1, h2 {
     color: $primary;
     font-weight: 300;
+    margin: 0 0 12px 0;
 }
 
 h1 {
@@ -130,6 +131,7 @@ header {
 
 main {
     padding: 20px;
+    @extend .clearfix;
     .previews {
         padding-top: 15px;
         @extend .clearfix;
@@ -169,6 +171,60 @@ main {
         }
     }
 }
+
+.site-content {
+    @media (max-width: $site_breakpoint_1 - 1px ) {
+        padding-bottom: 30px;
+    }
+    @media (min-width: $site_breakpoint_1 ) {
+        float: right;
+        width: 75%;
+        padding-left: 40px;
+    }
+}
+
+.site-sidebar {
+    @media (min-width: $site_breakpoint_1 ) {
+        float: left;
+        width: 25%;
+    }
+	.site-sidebar-nav {
+		ul, li { list-style: none; margin: 0; padding: 0; }
+		.page_item,
+		.cat-item {
+			margin: 1px 0 0 0;
+			a {
+				color: $secondary;
+				display: block;
+				padding: 10px 0;
+				text-decoration: none;
+                border-bottom: 1px solid #ccc;
+				&:focus,
+				&:hover {
+					/* background: mix($primary, #fff, 15%); */
+					color: $primary;
+				}
+			}
+			&.current_page_item > a {
+				color: $primary;
+			}
+			.children {
+				a {
+					padding-left: 30px;
+                    padding: 10px;
+					&:before {
+						content: '\2014\0020';
+					}
+				}
+				.children {
+					a {
+						padding-left: 50px;
+					}
+				}
+			}
+		}
+	} // .site-sidebar-nav
+} // .site-sidebar
 
 footer {
     background: #eee;

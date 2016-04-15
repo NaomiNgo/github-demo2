@@ -11,11 +11,11 @@ html, body {
   margin: 0;
 }
 
-.clearfix:before, header:before, main .previews:before, .clearfix:after, header:after, main .previews:after {
+.clearfix:before, header:before, main:before, main .previews:before, .clearfix:after, header:after, main:after, main .previews:after {
   content: " ";
   display: table;
 }
-.clearfix:after, header:after, main .previews:after {
+.clearfix:after, header:after, main:after, main .previews:after {
   clear: both;
 }
 
@@ -29,6 +29,7 @@ embed, object, iframe, img {
 h1, h2 {
   color: #669966;
   font-weight: 300;
+  margin: 0 0 12px 0;
 }
 
 h1 {
@@ -178,6 +179,66 @@ main .previews .preview {
   main .previews .preview:nth-of-type(3n+4) {
     clear: left;
   }
+}
+
+@media (max-width: 599px) {
+  .site-content {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 600px) {
+  .site-content {
+    float: right;
+    width: 75%;
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 600px) {
+  .site-sidebar {
+    float: left;
+    width: 25%;
+  }
+}
+.site-sidebar .site-sidebar-nav ul, .site-sidebar .site-sidebar-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-sidebar .site-sidebar-nav .page_item,
+.site-sidebar .site-sidebar-nav .cat-item {
+  margin: 1px 0 0 0;
+}
+.site-sidebar .site-sidebar-nav .page_item a,
+.site-sidebar .site-sidebar-nav .cat-item a {
+  color: black;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+.site-sidebar .site-sidebar-nav .page_item a:focus, .site-sidebar .site-sidebar-nav .page_item a:hover,
+.site-sidebar .site-sidebar-nav .cat-item a:focus,
+.site-sidebar .site-sidebar-nav .cat-item a:hover {
+  /* background: mix($primary, #fff, 15%); */
+  color: #669966;
+}
+.site-sidebar .site-sidebar-nav .page_item.current_page_item > a,
+.site-sidebar .site-sidebar-nav .cat-item.current_page_item > a {
+  color: #669966;
+}
+.site-sidebar .site-sidebar-nav .page_item .children a,
+.site-sidebar .site-sidebar-nav .cat-item .children a {
+  padding-left: 30px;
+  padding: 10px;
+}
+.site-sidebar .site-sidebar-nav .page_item .children a:before,
+.site-sidebar .site-sidebar-nav .cat-item .children a:before {
+  content: '\2014\0020';
+}
+.site-sidebar .site-sidebar-nav .page_item .children .children a,
+.site-sidebar .site-sidebar-nav .cat-item .children .children a {
+  padding-left: 50px;
 }
 
 footer {
