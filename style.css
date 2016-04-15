@@ -1,3 +1,9 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -5,12 +11,19 @@ html, body {
   margin: 0;
 }
 
-.clearfix:before, header:before, .clearfix:after, header:after {
+.clearfix:before, header:before, main .previews:before, .clearfix:after, header:after, main .previews:after {
   content: " ";
   display: table;
 }
-.clearfix:after, header:after {
+.clearfix:after, header:after, main .previews:after {
   clear: both;
+}
+
+embed, object, iframe, img {
+  display: block;
+  border: none;
+  height: auto;
+  max-width: 100%;
 }
 
 h1, h2 {
@@ -118,6 +131,53 @@ header .banner {
 
 main {
   padding: 20px;
+}
+main .previews {
+  padding-top: 15px;
+}
+@media (max-width: 599px) {
+  main .previews {
+    text-align: center;
+  }
+}
+@media (min-width: 600px) {
+  main .previews {
+    margin: 0 -15px;
+  }
+}
+main .previews .preview {
+  display: block;
+  max-width: 450px;
+}
+@media (max-width: 599px) {
+  main .previews .preview {
+    display: inline-block;
+    padding: 10px 0;
+    text-align: left;
+  }
+  main .previews .preview img {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+  main .previews .preview {
+    width: 50%;
+    padding: 15px;
+    float: left;
+  }
+  main .previews .preview:nth-of-type(2n+3) {
+    clear: left;
+  }
+}
+@media (min-width: 800px) {
+  main .previews .preview {
+    width: 33.3333%;
+    padding: 15px;
+    float: left;
+  }
+  main .previews .preview:nth-of-type(3n+4) {
+    clear: left;
+  }
 }
 
 footer {
