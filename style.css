@@ -246,3 +246,73 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
+footer .nav-social-networks {
+  padding: 8px 0 8px 8px;
+}
+@media (max-width: 599px) {
+  footer .nav-social-networks {
+    text-align: center;
+  }
+}
+footer .nav-social-networks span {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+}
+footer .nav-social-networks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+}
+footer .nav-social-networks li {
+  padding-left: 5px;
+  font-size: 0;
+  display: inline-block;
+}
+footer .nav-social-networks li:first-child {
+  padding-left: 0;
+}
+footer .nav-social-networks li.facebook a {
+  background-position: 0 0;
+}
+footer .nav-social-networks li.twitter a {
+  background-position: -32px 0;
+}
+footer .nav-social-networks li.pinterest a {
+  background-position: -64px 0;
+}
+footer .nav-social-networks li.instagram a {
+  background-position: -96px 0;
+}
+footer .nav-social-networks li.googleplus a {
+  background-position: -128px 0;
+}
+footer .nav-social-networks li.youtube a {
+  background-position: -160px 0;
+}
+footer .nav-social-networks li.linkedin a {
+  background-position: -192px 0;
+}
+footer .nav-social-networks li.rss a {
+  background-position: -224px 0;
+}
+footer .nav-social-networks li.sharethis a {
+  background-position: -255px 0;
+}
+footer .nav-social-networks li.wifi a {
+  background-position: -284px 0;
+}
+footer .nav-social-networks li a {
+  background: #669966 url(images/social-buttons.png);
+  display: block;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  text-indent: -9999px;
+}
+footer .nav-social-networks li a:focus, footer .nav-social-networks li a:hover {
+  opacity: .8;
+}
